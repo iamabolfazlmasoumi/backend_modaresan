@@ -31,7 +31,9 @@ export function runServer() {
 
     app.use(errorHandler);
 
-    app.listen(process.env.WEB_PORT, (port) => {
+    const port = process.env.WEB_PORT || 5000
+
+    app.listen(port, (port) => {
         console.log(`Server is up. PID: ${process.pid}`)
     })
 
