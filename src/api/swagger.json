@@ -1,0 +1,294 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Modaresan App API",
+    "description": "Find out how your APIs work",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "backend.staging.modaresan.tech",
+  "basePath": "/api",
+  "tags": [
+    {
+      "name": "Users",
+      "description": "API for users in the system"
+    }
+  ],
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "securityDefinitions": {
+    "ApiKeyAuth": {
+      "type": "apiKey",
+      "in": "headers",
+      "name": "authorization"
+    }
+  },
+  "paths": {
+    "/auth/signup/request": {
+      "post": {
+      }
+    },
+    "/auth/signup/verify": {
+      "put": {
+      }
+    },
+    "/auth/signin": {
+      "post": {
+      }
+    },
+    "/auth/signout": {
+      "get": {
+      }
+    },
+    "/auth/send-activation-code": {
+      "post": {
+      }
+    },
+    "/auth/forget-password/verify-activation-code": {
+      "put": {
+      }
+    },
+    "/users": {
+      "get": {
+      }
+    },
+    "/users/:id": {
+      "put": {
+      },
+      "get": {
+      }
+    },
+    "/users/:id/edit-mobile/verify-activation-code": {
+      "put": {
+      }
+    },
+    "/users/:id/change-password": {
+      "put": {
+      }
+    },
+    "/fiscal-years": {
+      "post": {
+      },
+      "get": {
+      }
+    },
+    "/permissions": {
+      "get": {
+      },
+      "post": {
+      }
+    },
+    "/permissions:id": {
+      "get": {
+      },
+      "put": {
+      }
+    },
+    "/regions/country": {
+      "post": {
+      },
+      "get": {
+      }
+    },
+    "/regions/province": {
+      "post": {
+      },
+      "get": {
+      }
+    },
+    "/regions/city": {
+      "post": {
+      },
+      "get": {
+      }
+    },
+    "/regions/country/:id": {
+      "get": {
+      },
+      "put": {
+      }
+    },
+    "/regions/province/:id": {
+      "get": {
+      },
+      "put": {
+      }
+    },
+    "/regions/city/:id": {
+      "get": {
+      },
+      "put": {
+      }
+    },
+    "/categories/branch": {
+      "post": {
+      },
+      "get": {
+      }
+    },
+    "/categories/sub-branch": {
+      "post": {
+      },
+      "get": {
+      }
+    },
+    "/categories/group": {
+      "post": {
+      },
+      "get": {
+      }
+    },
+    "/categories/sub-group": {
+      "post": {
+      },
+      "get": {
+      }
+    },
+    "/roles": {
+      "post": {
+      },
+      "get": {
+      }
+    },
+    "/roles/:id": {
+      "get": {
+      }
+    },
+    "roles/:id": {
+      "put": {
+      }
+    },
+    "site-settings": {
+      "put": {
+      },
+      "get": {
+      }
+    },
+    "sponsers": {
+      "put": {
+      }
+    },
+    "/subjects/lessons": {
+      "get": {
+      }
+    },
+    "/subjects/lesson/:id": {
+      "get": {
+      }
+    },
+    "/subjects/lesson": {
+      "post": {
+      }
+    },
+    "/subjects/seasons": {
+      "get": {
+      }
+    },
+    "/subjects/seasons/:id": {
+      "get": {
+      }
+    },
+    "/subjects/season": {
+      "post": {
+      }
+    },
+    "/subjects/topics": {
+      "get": {
+      }
+    },
+    "/subjects/topics/:id": {
+      "get": {
+      }
+    },
+    "/subjects/topic": {
+      "post": {
+      }
+    },
+    "/questions": {
+      "post": {
+      },
+      "get": {
+      }
+    },
+    "/questions/:id": {
+      "get": {
+      }
+    },
+    "/questions/:id/answer": {
+      "post": {
+      }
+    },
+    "/questions/:id/answers": {
+      "get": {
+      }
+    },
+    "/questions/:id/options": {
+      "get": {
+      }
+    },
+    "/questions/:id/option": {
+      "post": {
+      }
+    },
+    "/options/:id/textbook": {
+      "post": {
+      },
+      "get": {
+      }
+    },
+    "/textbooks": {
+      "get": {
+      }
+    },
+    "/question-banks/:id/questions": {
+      "get": {
+      },
+      "post": {
+      }
+    },
+    "/question-banks": {
+      "get": {
+      },
+      "post": {
+      }
+    },
+    "/question-banks/:id": {
+      "get": {
+      }
+    },
+    "lessons": {
+      "get": {
+      }
+    }
+  },
+  "definitions": {
+    "User": {
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      }
+    },
+    "userEmail": {
+      "properties": {
+        "email": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
