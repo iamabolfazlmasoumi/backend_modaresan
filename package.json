@@ -4,8 +4,9 @@
   "description": "Online Webinar and Courses for developers",
   "main": "src/api/server.js",
   "scripts": {
-    "start": "node -r esm index.js",
-    "seed": "node -r esm temp/seeder.js"
+    "start": "nodemon -r esm index.js",
+    "seed": "node -r esm temp/seeder.js",
+    "start:dev": "nodemon -r esm --watch"
   },
   "author": "Milad Vahidi",
   "license": "MIT",
