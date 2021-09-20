@@ -1,7 +1,7 @@
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import randomstring from "randomstring";
-import redis from "redis";
+// import redis from "redis";
 import { } from 'dotenv/config'
 // validations
 import User from "../models/user";
@@ -17,7 +17,7 @@ import ProgrammingError from "../api/validations/programmer-error";
 
 const secretKey = process.env.SECRET_KEY;
 const debug = require("debug")("app:dev");
-const redisClient = redis.createClient(process.env.REDIS_PORT);
+// const redisClient = redis.createClient(process.env.REDIS_PORT);
 
 const userController = {
     usersList: async function (req, res, next) {
@@ -41,7 +41,7 @@ const userController = {
             if (!user) {
                 return next(new OperationalError(NOT_FOUND_ERROR, "user"));
             } else {
-                redisClient.setex(req.params.id, 3600, JSON.stringify(user));
+                // redisClient.setex(req.params.id, 3600, JSON.stringify(user));
                 return res.status(200).json(user);
             }
         } catch (err) {

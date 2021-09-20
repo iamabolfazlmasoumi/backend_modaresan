@@ -14,7 +14,7 @@ import {
     showUserValidator,
 } from "../validations/user";
 import { assignHRValidator, unAssignHRValidator } from "../validations/human-resource";
-import { cache } from "../middlewares/cache";
+// import { cache } from "../middlewares/cache";
 import { checkAccessControl } from "../middlewares/access-control";
 
 
@@ -26,7 +26,7 @@ const router = express.Router();
 router.get("/", checkAccessControl('admin__get_user_list'), userController.usersList);
 router.get("/info", userController.getUserInformation);
 
-router.get("/:id", cache, userController.showUser);
+router.get("/:id", userController.showUser);
 
 router.put("/:id",
     // editUserValidator, 
